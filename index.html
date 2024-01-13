@@ -22,7 +22,7 @@
       <div id="header"></div>
       <div id="form">
         <h2>Sign up form</h2>
-        <div id="parent">
+        <div id="form-container">
           <div id="image"></div>
 
           <div id="form-container">
@@ -30,8 +30,58 @@
             <form>
               <fieldset>
                 <legend>Sign up form</legend>
-                <label for="user">
-                <input type="text" id="user" minlength="5" maxlength="20">
+                <div class="form-group">
+                  <label for="first-name">First name</label>
+                  <input 
+                    type="text" 
+                    id="first-name" 
+                    name="first-name" 
+                    minlength="1" 
+                    maxlength="50" 
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Last name</label>
+                  <input 
+                    type="text" 
+                    id="last-name" 
+                    name="last-name" 
+                    minlength="1" 
+                    maxlength="50"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone number</label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone"
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    required>
+                </div>
+                <div class="form-group">
+                  <label for="password-confirmed">Confirm Password</label>
+                  <input 
+                    type="password-confirmed" 
+                    id="password-confirmed" 
+                    name="password-confirmed" 
+                    required>
+                </div>
               </fieldset>
             </form>
           </div>
