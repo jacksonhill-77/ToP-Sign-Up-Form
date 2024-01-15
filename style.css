@@ -1,11 +1,15 @@
+:root {
+  --primary-colour: #cbd6f0;
+  --secondary-colour: #304D6D;
+  --secondary-colour-hover: #5d92cb;
+  --background-colour: black;
+  --accent-colour: #d24141;
+}
+
 html, body {
   height: 100%;
   margin: 0px;
   padding: 0px;
-}
-
-#header h2 {
-  color: #f5fcff;
 }
 
 .container {
@@ -13,12 +17,6 @@ html, body {
   flex-direction: row;
   margin: 0px;
   padding: 0px;
-}
-
-#splash-img {
-  padding: 0px;
-  height: auto;
-  width: 100%;
 }
 
 .image-container,
@@ -31,11 +29,19 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1 1 40%;
+  flex: 1 0 40%;
+  overflow: hidden;
+}
+
+#splash-img {
+  padding: 0px;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
 }
 
 .sign-up-container {
-  background-color: #000000;
+  background-color: var(--background-colour);
   flex: 3 1 60%;
 }
 
@@ -46,7 +52,7 @@ html, body {
   position: absolute;
   border-radius: 5px;
   border: 4px solid darkblue;
-  background-color: white;
+  background-color: var(--background-colour);
 }
 
 #logo-img {
@@ -56,8 +62,9 @@ html, body {
 }
 
 #logo-text {
-  font-family: 'Kanit', sans-serif;
-  color: indianred;
+  font-family: 'Zeyada', cursive;
+  color: var(--accent-colour);
+  font-size: 30px;
 }
 
 .sign-up-container {
@@ -77,31 +84,55 @@ html, body {
 }
 
 #header {
-  
+  display: flex;
+  align-items: center;
+}
+
+#header h2 {
+  color: var(--primary-colour);
 }
 
 #form-container {
   flex: 1 1 40%;
-  background-color: #cbd6f0;
-  color: #304D6D;
+  background-color: var(--primary-colour);
+  color: var(--secondary-colour);
+  box-shadow: inset 0px 10px 0px 20px var(--primary-colour);
+}
+
+#form-container > h2 {
+  font-weight: 500;
+  padding: 0px 0px 10px 0px;
+  color: var(--accent-colour);
 }
 
 form {
   display: flex;
   flex-direction: columns;
-  wrap: wrap;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 label {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
+  padding-bottom: 6px;
+}
+
+input {
+  border: 1px var(--background-colour) solid;
+  border-radius: 8px;
+  background-color: var(--background-colour);
+  color: var(--primary-colour);
+  font-family: 'Roboto', sans-serif;
+  padding: 8px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   flex-wrap: 50%;
+  margin-bottom: 20px;
 }
 
 #footer {
@@ -111,5 +142,16 @@ label {
 
 button {
   padding: 10px;
-  font-size: 25px;
+  font-size: 16px;
+  width: 150px;
+  height: 50px;
+  border: 2px var(--background-colour) solid;
+  border-radius: 10px;
+  color: var(--secondary-colour);
+  font-weight: 600;
+  background-color: var(--primary-colour);
+}
+
+button:hover {
+  border: 3px var(--secondary-colour-hover) solid;
 }
