@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&family=Zeyada&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
 </head>
 <body>
   <div class="container">
@@ -24,7 +25,7 @@
       </div>
       <div id="form-container">
         <h2>It's just a few clicks away...</h2>
-        <form>
+        <form id="personal-details" method="post" action="">
           <div class="form-group">
             <label for="first-name">First name</label>
             <input 
@@ -69,18 +70,19 @@
               name="password" 
               required>
           </div>
-          <div class="form-group">
+          <div class="form-group" id="password-confirmed">
             <label for="password-confirmed">Confirm Password</label>
             <input 
               type="password-confirmed" 
               id="password-confirmed" 
               name="password-confirmed" 
               required>
+            <span id="password-warning" class="hidden">* Passwords do not match</span>
           </div>
         </form>
       </div>
       <div id="footer">
-        <button>Create account</button>
+        <button id="submit-button" type="submit" form="user-details">Create account</button>
         <span>Already have an account? <a href="#">Log in</a></span>
       </div>
     </div>
