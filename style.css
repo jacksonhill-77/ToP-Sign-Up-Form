@@ -6,7 +6,8 @@
   --accent-colour-02: #eed08c;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -67,7 +68,7 @@ html, body {
 #logo-text {
   font-family: 'Zeyada', cursive;
   color: var(--accent-colour);
-  font-size: 75px;
+  font-size: 5rem;
   margin: 30px 0px 0px 0px;
   padding: 20px;
 }
@@ -79,7 +80,7 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
-.sign-up-container > div{
+.sign-up-container>div {
   padding: 40px;
 }
 
@@ -105,7 +106,7 @@ html, body {
   box-shadow: inset 0px 10px 0px 20px var(--primary-colour);
 }
 
-#form-container > h2 {
+#form-container>h2 {
   font-weight: 500;
   padding: 0px 0px 10px 0px;
   color: var(--accent-colour);
@@ -118,22 +119,6 @@ form {
   gap: 30px;
 }
 
-label {
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 500;
-  padding-bottom: 6px;
-}
-
-input {
-  border: 1px var(--background-colour) solid;
-  border-radius: 8px;
-  background-color: var(--background-colour);
-  color: var(--secondary-colour);
-  font-family: 'Roboto', sans-serif;
-  padding: 8px;
-}
-
 .form-group {
   display: flex;
   flex-direction: column;
@@ -141,12 +126,53 @@ input {
   margin-bottom: 20px;
 }
 
+label, 
+#password-warning {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+label {
+  padding-bottom: 6px;
+}
+
+#password-warning {
+  color: var(--accent-colour);
+  padding-top: 4px;
+}
+
+label::after {
+  content: " *";
+  color: var(--accent-colour);
+}
+
+input {
+  border: 2px var(--background-colour) solid;
+  border-radius: 8px;
+  background-color: var(--background-colour);
+  color: var(--secondary-colour);
+  font-family: 'Roboto', sans-serif;
+  padding: 8px;
+  outline: none;
+}
+
+input:focus-visible {
+  border: 2px var(--accent-colour) solid;
+  outline: none;
+  box-shadow: 2px 2px 2px 0px #d4d4d4;
+}
+
+.hidden {
+  display: none;
+}
+
 #footer {
   display: flex;
   flex-direction: column;
 }
 
-button {
+#submit-button {
   padding: 10px;
   font-size: 16px;
   width: 150px;
@@ -158,7 +184,7 @@ button {
   background-color: var(--primary-colour);
 }
 
-button:hover {
+#submit-button:hover {
   border: 3px var(--accent-colour) solid;
 }
 
