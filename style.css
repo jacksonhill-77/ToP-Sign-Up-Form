@@ -27,6 +27,8 @@ body {
   margin: 0px;
 }
 
+/* LEFT MAIN DIV */
+
 .image-container {
   display: flex;
   justify-content: center;
@@ -70,6 +72,8 @@ body {
   padding: 20px;
 }
 
+/* RIGHT MAIN DIV */
+
 .sign-up-container {
   background-color: var(--background-colour);
   flex: 3 1 60%;
@@ -97,6 +101,8 @@ body {
   color: var(--accent-colour-02);
   font-weight: 500;
 }
+
+/* FORM */
 
 #form-container {
   flex: 1 1 40%;
@@ -165,6 +171,12 @@ input:focus-visible {
 .hidden {
   display: none;
 }
+
+input[type=password]:error {
+  border-color: red;
+}
+
+/* FOOTER */
 
 #footer {
   display: flex;
