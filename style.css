@@ -1,12 +1,13 @@
 body,
 html {
   height: 100%;
-  --font-primary: #6B705C;
-  --font-secondary: #654534;
-  --background-secondary: #B7B7A4;
-  --background-primary: #feeee1;
-  --placeholder: #DDBEA9;
-  --placeholder-001: #A5A58D;
+  --font-primary: #16425B;
+  --font-secondary: #16425B;
+  --background-primary: #e6f4f5;
+  --background-secondary: #98c2dd;
+  --background-tertiary: #98ddd8;
+  --placeholder: #6d58a7;
+  --border-color:  #ffffff;
   font-family: 'Inter', sans-serif;
 }
 
@@ -27,6 +28,7 @@ html {
   display: grid;
   grid-template-rows: 150px 50px 1fr;
   gap: 30px;
+  border-right: 4px var(--border-color) solid;
 }
 
 .sidebar > div {
@@ -56,7 +58,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px var(--placeholder) solid;
+  border-bottom: 4px var(--border-color) solid;
 }
 
 .logo svg {
@@ -100,6 +102,8 @@ svg.nav {
   display: grid;
   grid-template-rows: 1fr 2fr;
   padding: 0px 30px 0px 30px;
+  color: var(--font-secondary);
+  border-bottom: 4px var(--border-color) solid;
 }
 
 .notifications #profile-pic {
@@ -201,11 +205,11 @@ svg.nav {
 }
 
 .actions button {
-  background-color: var(--placeholder);
+  background-color: var(--background-secondary);
   font-weight: 600;
   width: 80px;
   height: 30px;
-  border: 2px var(--placeholder-001) solid;
+  border: 2px var(--placeholder) solid;
   margin: 10px;
   border-radius: 15px;
 }
@@ -326,6 +330,7 @@ svg.nav {
 .announcements-grid {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 15px;
 }
 
@@ -351,12 +356,15 @@ svg.nav {
 
 .top-users {
   grid-column-start: 2;
+  width: auto;
 }
 
 .top-users-grid {
   display: grid;
-  gap: 10px;
+  gap: 15px;
   grid-template-columns: 1fr;
+  justify-content: stretch;
+  width: 100%;
 }
 
 .top-users-grid > div {
@@ -384,5 +392,9 @@ svg.nav {
 
 .top-users p {
   color: var(--font-secondary)
+}
+
+.top-users h4 {
+  margin-bottom: 10px;
 }
 
